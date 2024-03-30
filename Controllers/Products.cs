@@ -1730,13 +1730,14 @@ namespace radiobutton.Controllers
             return RedirectToAction("Myaccount", "Products");
 
 
-
+            
 
 
 
 
         }
 
+        /* this is the start of Online order*/
 
          public IActionResult Order2()
       {
