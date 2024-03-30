@@ -1,0 +1,192 @@
+﻿@{
+    Layout = null;
+    var fname = "1.jpg";
+    var orders = ViewData["orders"] as List<radiobutton.Models.Orders>;
+}
+
+
+   
+
+<!doctype html>
+<html class="no-js" lang="">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="10" />
+    <title>Dashboard Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/assets/css/normalize.css">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="~/assets/css/pe-icon-7-filled.css">
+    <link rel="stylesheet" href="~/assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="menu-title">Menu</li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="~/Administration/Products"> Product Master</a>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="~/Administration/Usersmaster">User Master</a>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="~/Administration/Orders"> Order Master</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </aside>
+    <div id="right-panel" class="right-panel">
+        <header id="header" class="header">
+            <div class="top-left">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="~/images/logo/5.png" alt="Logo"></a>
+     
+                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="header-menu">
+                    <a href="~/Products/Allproducts">Visit Site</a>
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Admin</a>
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content pb-0">
+            <div class="orders">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="box-title">Orders</h4>
+
+                            </div>
+                           
+                            <div class="card-body">
+                                <form method="get" asp-action="SearchOrder" asp-controller="Administration" target="_blank">
+                               <input class="form-control" type="text" name="orderSearch" /><br />
+                               <input  type="submit" value="Search"/>
+                                </form>
+                            </div>
+                            <div class="card-body--">
+                                <div class="table-stats order-table ov-h">
+                                    <table class="table ">
+                                        <thead>
+                                            <tr>
+                                                 
+                                               
+                                               <th>Order Id</th>
+                                                <th>Username</th>
+                                                <th>Order Date</th>
+                                                <th>Payment Mode</th>
+                                                <th>Order Status</th>
+                                                <th>Payment Status</th>
+                                                <th>Trackin No</th>
+                                                <th>Order Details</th>
+                                                <th>Invoice</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if(orders!=null)
+                                            {
+                                                @foreach (var item in orders)
+                                                {
+                                                    <tr>
+
+
+
+
+
+                                                        <td>@item.Id</td>
+
+
+                                                        <td>@item.Username</td>
+
+
+
+
+
+                                                        <td>@item.dateoforder</td>
+
+                                                        <td>@item.Paytype</td>
+
+                                                      
+                                                        <td>@item.OrerStatus
+                                                             <form asp-action="ChangeOrderStatus" asp-controller="Administration" method="post">
+                                                                 <input hidden="" type="number" value="@item.Id" name="orderIds">
+                                                             <select name="orderStatus">
+                                                                 <option>Select</option>
+                                                                 <option>Processing</option>
+                                                                 <option>Dispatched</option>
+                                                                 <option>Returned</option>
+                                                                 <option>Refund</option>
+                                                                 <option>Completed</option>
+                                                                    <option>Cancelled</option>
+
+                                                             </select>
+                                                             <button type="submit">Update</button>
+                                                             </form>
+                                                          </td>
+
+
+                                                      
+
+                                                        <td>@item.PaymentStatus</td>
+
+                                                         <td><a href="@item.Trackurl" target="_blank">@item.Trackno</a>
+                                                            <a href="~/Administration/AddTrackingNo?id=@item.Id" target="_blank" style="font-size:18px; color:green;"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                                                         </td>
+
+
+                                                        <td><a href="~/Administration/OrderDetails?Value=@item.Id" target="_blank">See Details</a></td>
+                                                        <td><a href="~/Administration/Report?id=@item.Id" target="_blank">Download</a></td>
+                                                    </tr>
+
+
+                                                }
+                                            }
+                                           
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <footer class="site-footer">
+            <div class="footer-inner bg-white">
+                <div class="row">
+                    <div class="col-sm-6">
+                        Copyright &copy; 2018 Ela Admin
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        Designed by <a href="https://colorlib.com/">Colorlib</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="~/assets/js/vendor/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="~/assets/js/popper.min.js" type="text/javascript"></script>
+    <script src="~/assets/js/plugins.js" type="text/javascript"></script>
+    <script src="~/assets/js/main.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+
+}
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ShopGems-Ecommerce</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+
+
+</head>
+   <body>
+
+    <div id="loader">
+    </div>
+
+
+    <h1>
+        your order is placed sucessfully
+    </h1>
+    <a asp-action="Allproducts" asp-controller="Products">Continue Shopping</a>
+
+    <script>
+
+        var loader = document.getElementById("loader");
+        window.addEventListener("load", function () {
+
+            loader.style.display = "none";
+
+        })
+
+    </script>
+
+</body>
+</html>
+
+

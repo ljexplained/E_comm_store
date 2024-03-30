@@ -1,0 +1,517 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="~/images/logo/6.png" type="image/png" />
+    <title>Braino Services </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Library/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Library/vendors/linericon/style.css" />
+    <link rel="stylesheet" href="~/Library/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Library/css/themify-icons.css" />
+    <link rel="stylesheet" href="~/Library/css/flaticon.css" />
+    <link rel="stylesheet" href="~/Library/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/Library/vendors/lightbox/simpleLightbox.css" />
+    <link rel="stylesheet" href="~/Library/vendors/nice-select/css/nice-select.css" />
+    <link rel="stylesheet" href="~/Library/vendors/animate-css/animate.css" />
+    <link rel="stylesheet" href="~/Library/vendors/jquery-ui/jquery-ui.css" />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="~/Library/css/style.css" />
+    <link rel="stylesheet" href="~/Library/css/responsive.css" />
+
+    <style>
+        section {
+            border-bottom: 1px solid #ccc;
+            margin-top: 1em;
+        }
+
+            section .col-md-3 {
+                border-left: 1px solid #ccc;
+            }
+
+                section .col-md-3:first-child {
+                    border: none;
+                }
+    </style>
+
+</head>
+
+<body>
+    <!--================Header Menu Area =================-->
+    <header class="header_area">
+
+        <div class="main_menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="~/Products/Allproducts">
+                        <img src="~/images/logo/5.png" alt="" />
+                    </a>
+                    <li style="list-style:none;" class="nav-item">
+                        <a href="~/Products/Cart" class="icons">
+                            <i style="font-size:20px;" class="ti-shopping-cart"></i><span style="color:orange;">@ViewBag.count</span>
+                        </a>
+                    </li>
+
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
+                        <div class="row w-100 mr-0">
+                            <div class="col-lg-7 pr-0">
+                                <ul class="nav navbar-nav center_nav pull-right">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="~/Products/Allproducts">Home</a>
+                                    </li>
+                                    <li class="nav-item submenu dropdown">
+                                        <a href="~/Products/FingerPrint?str=fingerprint" class="nav-link dropdown-toggle"
+                                           data-toggle="dropdown"
+                                           role="button"
+                                           aria-haspopup="true"
+                                           aria-expanded="false">Biometric</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="~/Products/FingerPrint?str=fingerprint">Fingerprint Device</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="~/Products/IRIS?str=iris">Iris Scanner</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="~/Products/Aadhaar?str=Aadhaar">Aadhaar Product</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item submenu dropdown">
+                                        <a href="~/Products/FingerPrint?str=Cable" class="nav-link">Cables</a>
+
+
+                                    </li>
+
+
+                                    <li class="nav-item submenu dropdown">
+                                        <a href="~/Products/FingerPrint?str=Smartphone" class="nav-link"
+                                           data-toggle="dropdown"
+                                           role="button"
+                                           aria-haspopup="true"
+                                           aria-expanded="false">Mobile</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="~/Products/Refurbished?str=Smartphone" class="nav-link">Mobile</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="~/Products/Refurbished?str=Smartphone Accessories" class="nav-link">Mobile Accessories</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+
+                                    <li class="nav-item submenu dropdown">
+                                        <a href="~/Products/FingerPrint?str=Laptop" class="nav-link dropdown-toggle"
+                                           data-toggle="dropdown"
+                                           role="button"
+                                           aria-haspopup="true"
+                                           aria-expanded="false">Laptops</a>
+
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="~/Products/Refurbished?str=Refurbished" class="nav-link">Refurbished</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="~/Products/Accessories?str=Accessories" class="nav-link">Laptop Accessories</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="~/Products/Bags?str=Bags" class="nav-link">Laptop Bags</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="~/Products/Battery?str=Battery" class="nav-link">Laptop Battery</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="~/Products/Charger?str=Charger" class="nav-link">Laptop Charger</a>
+                                            </li>
+
+
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item submenu dropdown">
+                                        <a href="~/Contacts/ContactUs" class="nav-link dropdown-toggle"
+                                           data-toggle="dropdown"
+                                           role="button"
+                                           aria-haspopup="true"
+                                           aria-expanded="false">Contact</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="~/Contacts/AboutUs" class="nav-link">About Us</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="~/Contacts/ReturnPolicy" class="nav-link">Return Policy</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="~/Contacts/Privacy" class="nav-link">Privacy Policy</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="~/Contacts/Shipping" class="nav-link">Shipping Policy</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="~/Contacts/TarrifsAndSurcharges" class="nav-link">International Tarrifs</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="~/Contacts/BillingTerms" class="nav-link">Billing Terms And Conditions </a>
+                                            </li>
+
+
+                                            <li class="nav-item">
+                                                <a href="~/Contacts/ContactUs" class="nav-link">Contact Us</a>
+                                            </li>
+
+
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-5 pr-0">
+                                <ul class="nav navbar-nav navbar-right right_nav pull-right">
+                                    <li class="nav-item">
+
+                                        <div style="margin-top:20px;" class="form-wrap">
+                                            <form class="form-inline" asp-action="Product_Search" asp-controller="Products" method="get">
+                                                <input class="form-control" name="str" placeholder="Search .." type="text">
+                                                <button class="btn btn-default" type="submit">Search</button>
+
+
+
+                                            </form>
+                                        </div>
+
+
+                                    </li>
+
+                                    <!--
+                                         <li class="nav-item">
+                                          <a href="~/Products/Cart" class="icons">
+                                              <i style="font-size:20px;" class="ti-shopping-cart"></i><span style="color:orange;">@ViewBag.count</span>
+                                          </a>
+                                      </li>
+                                    -->
+
+                                    <li class="nav-item">
+                                        @if (ViewBag.uname != null)
+                                        {
+                                            <a href="~/Products/Myaccount" class="icons">@ViewBag.uname</a>
+                                            <a style="color:red;" href="~/Products/Logout">Logout</a>
+                                        }
+                                        else
+                                        {
+                                            <a href="~/Products/UserLogin" class="icons">
+                                                <i class="ti-user" aria-hidden="true"></i>
+                                            </a>
+                                        }
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+
+    <div class="container mt-40">
+        <h3>Site Map</h3>
+
+
+        <section id="sec1" style="margin-top:20px;">
+
+            <h2>Product Categories</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <ul>
+                        <li><a href="https://www.brainoservices.co.in/Products/Allproducts">Home</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/FingerPrint?str=fingerprint">Biometric</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/IRIS?str=iris">Iris Scanner</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/Aadhaar?str=Aadhaar">Aadhaar Product</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><a href="https://www.brainoservices.co.in/Products/FingerPrint?str=Cable">Cables</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/FingerPrint?str=Smartphone">Mobile</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/Refurbished?str=Smartphone">Mobile</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/Refurbished?str=Smartphone Accessories">Mobile Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><a href="https://www.brainoservices.co.in/Products/Laptops">Laptops</a></td></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/Refurbished?str=Refurbished">Refurbished Laptops</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/Accessories?str=Accessories">Laptop Accessories</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/Bags?str=Bags">Laptop Bags</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><a href="https://www.brainoservices.co.in/Products/Battery?str=Battery">Laptop Battery</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/Charger?str=Charger">Laptop Charger</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="sec2" style="margin-bottom:20px;">
+
+            <h2>Useful Links</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <ul>
+                        <li><a href="https://www.brainoservices.co.in/Products/Byget">Buy 1 get 1 Free</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/Bulk">Bulk Order</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/FingerPrint?str=Fingerprint">Biometric Products</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Products/Aadhaar">Aadhaar Product And Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li>
+                            <a href="https://www.brainoservices.co.in/Products/UserLogin">
+                                Login or Create Account
+                            </a>
+                        </li>
+                        <li><a href="https://www.brainoservices.co.in/Products/Forget1">Forget Password</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><a href="https://www.brainoservices.co.in/Contacts/ContactUs">Contact Us</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Contacts/AboutUs">About Us</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Contacts/ReturnPolicy">Return Policy</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Contacts/Privacy">Privacy Policy</a></li>
+
+
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li> <a href="https://www.brainoservices.co.in/Contacts/Shipping">Shipping Policy</a></li>
+                        <li><a href="https://www.brainoservices.co.in/Contacts/TarrifsAndSurcharges">International Tarrifs</a></li>
+
+                        <li><a href="https://www.brainoservices.co.in/Contacts/BillingTerms">Billing Terms And Conditions </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--
+                <section id="sec3">
+
+                <h2>Section 3</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Clients</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Clients</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Clients</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="sec4">
+
+                <h2>Section 4</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Clients</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Clients</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Clients</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        -->
+
+
+    </div>
+    <!-- /container -->
+    <!--================ start footer Area  =================-->
+    <footer class="footer-area section_gap ">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Our company “ShopGems” is a Proprietor based company that started its business in the year 2017 at Delhi, India.
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="~/Contacts/ContactUs">Contact Us</a></li>
+                        <li><a href="~/Contacts/TarrifsAndSurcharges">International Tariffs Surcharges </a></li>
+                        <li><a href="~/Contacts/ReturnPolicy">Refund  Policy</a></li>
+                        <li><a href="~/Contacts/Privacy">Privacy Policy</a></li>
+                        <li><a href="~/Contacts/Shipping">Shipping Policy</a></li>
+                        <li><a href="~/Contacts/BillingTerms">Billing Term And Condition</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="~/Products/Byget">Buy 1 get 1 Free</a></li>
+                        <li><a href="~/Products/Bulk">Bulk Order</a></li>
+                        <li><a href="~/Products/FingerPrint?str=Fingerprint">Biometric Products</a></li>
+                        <li><a href="~/Products/Aadhaar">Aadhaar Product And Accessories</a></li>
+                        <li><a href="~/Products/Accessories?str=Accessories">Laptop And Accessories</a></li>
+                        <li><a href="~/Home/Privacy">Site Map</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="#">Building No. 135,</a></li>
+                        <li><a href="#">Street No. 54 T,</a></li>
+                        <li><a href="#">Ist 60 Feet Road, Molarband Ext.</a></li>
+                        <li><a href="#">Badarpur New Delhi 110044.</a></li>
+                        <li>
+                            <a href="#">
+                                +917011591226
+                                info@brainoservices.co.in
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 single-footer-widget">
+                    <h4>Payment</h4>
+                    <p>You can trust us</p>
+                    <img style="height:350px; width:268px;" class="img-fluid" src="~/image/qrcodeforpayment.jpeg" />
+                </div>
+            </div>
+            <div class="footer-bottom row align-items-center">
+                <p class="footer-text m-0 col-lg-8 col-md-12">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;Braino Services 2017 All rights reserved | Designed & developed by Braino Services , Powered by Braino Services
+
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+                <div class="col-lg-4 col-md-12 footer-social">
+                    <a href="https://www.facebook.com/brainoservices/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/watch?v=vZXJo3ZAyxM"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="~/Library/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Library/js/popper.js"></script>
+    <script src="~/Library/js/bootstrap.min.js"></script>
+    <script src="~/Library/js/stellar.js"></script>
+    <script src="~/Library/vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="~/Library/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="~/Library/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="~/Library/vendors/isotope/isotope-min.js"></script>
+    <script src="~/Library/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Library/js/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Library/vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="~/Library/vendors/counter-up/jquery.counterup.js"></script>
+    <script src="~/Library/js/mail-script.js"></script>
+    <script src="~/Library/js/theme.js"></script>
+    <script>
+        if (performance.navigation.type == 2) {
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
+
